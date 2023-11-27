@@ -10,16 +10,15 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @State public var progress: CGFloat = 1.0
+    @State public var progress: CGFloat = 0.3
     
     
     var body: some View {
         ZStack {
                     Color.black
                         .edgesIgnoringSafeArea(.all)
-                    ActivityRingView(progress: $progress)
-                        .fixedSize()
-            MyView(progress: $progress).fixedSize()
+                                        
+           // MyView(progress: $progress).fixedSize()
                 }
 
 
